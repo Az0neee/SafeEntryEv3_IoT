@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795114466631",
+    "project_id": "safeentry-39ec7",
+    "storage_bucket": "safeentry-39ec7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795114466631:android:8139e3fb076499e35ab062",
+        "android_client_info": {
+          "package_name": "com.example.safeentry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9-ERZl_hiCKbrBwj3x7PvWniAgsgEHYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

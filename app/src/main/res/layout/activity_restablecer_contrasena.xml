@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="24dp"
+    tools:context=".RestablecerContrasena">
+
+    <!-- Título principal-->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/restablecer_contrasena"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp" />
+
+    <!-- Campo donde ira la nueva contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiContrasenaNueva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nueva_contrasena"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Campo de texto para ingresar la contraseña -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContrasenaNueva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo donde ira la nueva contraseña confirmandola -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiConfirmarContrasena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirmar_contrasena"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tiContrasenaNueva"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Campo de texto para ingresar la contraseña -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfirmarContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón para cambiar la contraseña-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRestablecer"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/Celeste"
+        android:text="@string/restablecer_contrasena"
+        app:layout_constraintTop_toBottomOf="@+id/tiConfirmarContrasena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

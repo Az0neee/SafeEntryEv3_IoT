@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".OlvidasteContrasena">
+
+    <!-- Título principal en la parte superior -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recuperar_contrasena"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Descripción debajo del título -->
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingrese_correo"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"/>
+
+    <!-- Campo de entrada para el correo -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/correo"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescripcion">
+
+    <!-- Entrada para el correo -->
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón para recuperar la contraseña -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRecuperar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/Celeste"
+        android:layout_marginTop="40dp"
+        android:text="@string/recuperar_contrasena"
+        app:layout_constraintTop_toBottomOf="@id/tiCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
