@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity() {
                 .addOnSuccessListener {
                     contadorPuertas++
                     seAgregoPuerta = false
-                    Toast.makeText(this, "${puerta.nombre} añadida correctamente con ID $idUnico", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "${puerta.nombre} añadida correctamente ", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
                     seAgregoPuerta = false
